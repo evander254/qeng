@@ -1,0 +1,1271 @@
+﻿[
+    {
+        "Student":  "Jennifer Lynn Brown",
+        "Course":  "Income Taxation (ACCTG-121-800)",
+        "Task":  "Chapter 5 Tax Scenarios FA2026",
+        "Due":  "2026-09-27",
+        "Status":  "Draft saved",
+        "Hours":  1.5,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Jennifer Lynn Brown",
+        "Course":  "Income Taxation (ACCTG-121-800)",
+        "Task":  "Chapter 7 Tax Scenarios FA2026",
+        "Due":  "2026-10-04",
+        "Status":  "Unopened",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "Discussion: AD-AS",
+        "Due":  "2026-10-07",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "Discussion: Money and Banking",
+        "Due":  "2026-10-09",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "hw_Ma",
+        "Due":  "2026-10-11",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "hw_Mb",
+        "Due":  "2026-10-11",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "hw_MFPa",
+        "Due":  "2026-10-16",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "hw_MFPb",
+        "Due":  "2026-10-16",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "Discussion: The Influence of Monetary and Fiscal Policy on AD",
+        "Due":  "2026-10-14",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "Final exam",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  1.25,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Principles of Macroeconomics (ECON-202-801)",
+        "Task":  "Term paper",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 3 Activity",
+        "Due":  "2026-09-28",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 3 Extra Credit",
+        "Due":  "",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Video Introduction",
+        "Due":  "2026-08-24",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 3 Discussion",
+        "Due":  "2026-09-28",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 4 Discussion",
+        "Due":  "2026-10-05",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 6 Discussion",
+        "Due":  "2026-10-19",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 8 Discussion",
+        "Due":  "2026-11-02",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 11 Discussion",
+        "Due":  "2026-11-16",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Exam 1",
+        "Due":  "2026-10-26",
+        "Status":  "Unfinished",
+        "Hours":  1.25,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 1 Knowledge Check Part 1",
+        "Due":  "2026-08-31",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 1 Knowledge Check Part 2",
+        "Due":  "2026-08-31",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 1 Practice",
+        "Due":  "2026-09-08",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 1 Application",
+        "Due":  "2026-09-08",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 2 Knowledge Check Part 1",
+        "Due":  "2026-09-14",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 2 Knowledge Check Part 2",
+        "Due":  "2026-09-14",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 2 Application",
+        "Due":  "2026-09-21",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 3 Knowledge Check Part 2",
+        "Due":  "2026-09-28",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 3 Practice",
+        "Due":  "2026-10-05",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 3 Application",
+        "Due":  "2026-10-05",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Samantha Beck",
+        "Course":  "Financial Accounting (ACCTG-110-802)",
+        "Task":  "Chapter 3: Double Entry Accounting System",
+        "Due":  "2026-09-28",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "Principles of Macroeconomics (ECON-202-800)",
+        "Task":  "Case Study PowerPoint Submission",
+        "Due":  "2026-12-06",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "Principles of Macroeconomics (ECON-202-800)",
+        "Task":  "Case Study Video Submission",
+        "Due":  "2026-12-12",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "Principles of Macroeconomics (ECON-202-800)",
+        "Task":  "Global Warming Effects",
+        "Due":  "2026-11-01",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "Principles of Macroeconomics (ECON-202-800)",
+        "Task":  "Exam 2",
+        "Due":  "2026-11-01",
+        "Status":  "Unfinished",
+        "Hours":  1.25,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "Principles of Macroeconomics (ECON-202-800)",
+        "Task":  "Exam 3",
+        "Due":  "2026-11-22",
+        "Status":  "Unfinished",
+        "Hours":  1.25,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Word 2021 In Practice - Ch 2 Guided Project 2-1",
+        "Due":  "2026-09-05",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Word - Chapter 3 - Collaborating with Others and Working with Reports",
+        "Due":  "2026-09-12",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Designing Your Future: Final Microsoft Office Project",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Excel 2021 In Practice - Ch 1 Guided Project 1-3",
+        "Due":  "2026-09-19",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Excel 2021 In Practice - Ch 2 Guided Project 2-3",
+        "Due":  "2026-09-19",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Excel - Chapter 3 - Creating and Editing Charts",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Excel 2021 In Practice - Ch 3 Guided Project 3-3",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Understanding Generative AI \u0026 Copilot",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "PowerPoint - Chapter 1 - Creating and Editing Presentations",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "PowerPoint 2021 In Practice - Ch 1 Guided Project 1-2",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "PowerPoint - Chapter 2 - Illustrating with Pictures and Information Graphics",
+        "Due":  "2026-10-10",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "PowerPoint 2021 In Practice - Ch 2 Guided Project 2-3",
+        "Due":  "2026-10-10",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "PowerPoint - Chapter 3 - Preparing for Delivery and Using a Slide Presentation",
+        "Due":  "2026-10-10",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "PowerPoint 2021 In Practice - Ch 3 Guided Project 3-1",
+        "Due":  "2026-10-10",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Final Software Test",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  1.25,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Marcus L Brinkley",
+        "Course":  "MS Office for Business Applic (BADM-106-806)",
+        "Task":  "Career Essentials - Introduce \u0026 Practice Reflection",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Introductory Psychology (PSYCH-231-813)",
+        "Task":  "McGraw Hill/Connect Quiz: Chapter 1",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Introductory Psychology (PSYCH-231-813)",
+        "Task":  "Direct Response: Chapter 1, Nature and Nurture in My Life",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Introductory Psychology (PSYCH-231-813)",
+        "Task":  "Journal #1: Test-Taking Strategies.",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Introductory Psychology (PSYCH-231-813)",
+        "Task":  "Syllabus Quiz",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Introductory Psychology (PSYCH-231-813)",
+        "Task":  "Discussion Board: Chapter 2, Scientific Method",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 1 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-08-30",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 5",
+        "Due":  "2026-09-27",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 6",
+        "Due":  "2026-10-04",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 7",
+        "Due":  "2026-10-11",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 8",
+        "Due":  "2026-10-18",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 9",
+        "Due":  "2026-10-25",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 10",
+        "Due":  "2026-11-08",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 11",
+        "Due":  "2026-11-22",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Questions for Discussion - Chapter 12",
+        "Due":  "2026-12-06",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 2 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-09-06",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 5 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-09-27",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 6 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-10-04",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 7 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-10-11",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 8 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-10-18",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 9 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-10-25",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 10 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-11-08",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 11 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-11-26",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Wesley R Gray",
+        "Course":  "Latin American History (HIST-231-800)",
+        "Task":  "Readings - Chapter 12 (Primary Source Docs at end of Chapter)",
+        "Due":  "2026-12-06",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Citing Sources in APA Activity",
+        "Due":  "2026-11-07",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Outside Speech Critique",
+        "Due":  "2026-11-28",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Speech 2",
+        "Due":  "2026-11-14",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Speech Ethics Analysis",
+        "Due":  "2026-11-21",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Final Grade",
+        "Due":  "",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Problem Solution Speech",
+        "Due":  "2026-12-05",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Course Policy Agreement",
+        "Due":  "2026-09-27",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Exam 1",
+        "Due":  "2026-10-31",
+        "Status":  "Unfinished",
+        "Hours":  1.25,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Exam 2",
+        "Due":  "2026-12-12",
+        "Status":  "Unfinished",
+        "Hours":  1.25,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Video Introduction Activity",
+        "Due":  "2026-09-27",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "YouTube Argument Activity",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Analyze a Celebratory Speech",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Speech 1 Self Evaluation",
+        "Due":  "2026-10-24",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Analyze an Informative Speech",
+        "Due":  "2026-10-31",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Speech Delivery Analysis",
+        "Due":  "2026-11-07",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Speech 2 Self Evaluation",
+        "Due":  "2026-11-14",
+        "Status":  "Unfinished",
+        "Hours":  1.5,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Elements of Speech (SPEECH-201-805)",
+        "Task":  "Speech 3 Self Evaluation",
+        "Due":  "2026-12-05",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Syllabus Quiz",
+        "Due":  "2026-08-29",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Financial Literacy Quiz Results",
+        "Due":  "2026-08-29",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 1",
+        "Due":  "2026-08-29",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Career Worksheet",
+        "Due":  "2026-09-05",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Choose Investments",
+        "Due":  "2026-09-05",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "AI Investment Picks Extra Credit",
+        "Due":  "2026-09-09",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Savings Challenge Goal",
+        "Due":  "2026-09-05",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Diary",
+        "Due":  "2026-09-05",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 3",
+        "Due":  "2026-09-12",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 3",
+        "Due":  "2026-09-12",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Balance Sheet Analysis",
+        "Due":  "2026-09-12",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 4",
+        "Due":  "2026-09-19",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 4",
+        "Due":  "2026-09-19",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Wants vs Needs",
+        "Due":  "2026-09-19",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Plan Analysis",
+        "Due":  "2026-09-19",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Plan using AI extra credit",
+        "Due":  "2026-09-23",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "OVERDUE"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 5",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 5",
+        "Due":  "2026-09-26",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "URGENT"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 6",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 6",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 7",
+        "Due":  "2026-10-10",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 7",
+        "Due":  "2026-10-10",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Savings Update 1",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Diary Update 1",
+        "Due":  "2026-10-03",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 8",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 8",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Plan Update",
+        "Due":  "2026-10-17",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 9",
+        "Due":  "2026-10-24",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 9",
+        "Due":  "2026-10-24",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 10",
+        "Due":  "2026-10-31",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 10",
+        "Due":  "2026-10-31",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Diary Update 2",
+        "Due":  "2026-10-31",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Savings Update 2",
+        "Due":  "2026-10-31",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 11",
+        "Due":  "2026-11-07",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 11",
+        "Due":  "2026-11-07",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Plan Update 2",
+        "Due":  "2026-11-14",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 12",
+        "Due":  "2026-11-14",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 12",
+        "Due":  "2026-11-14",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 13",
+        "Due":  "2026-11-21",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 13",
+        "Due":  "2026-11-21",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 14",
+        "Due":  "2026-11-28",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 14",
+        "Due":  "2026-11-28",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Savings Update 3",
+        "Due":  "2026-11-28",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Spending Diary Update 3",
+        "Due":  "2026-11-28",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 15",
+        "Due":  "2026-12-05",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 15",
+        "Due":  "2026-12-05",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Case Study 16",
+        "Due":  "2026-12-12",
+        "Status":  "Unfinished",
+        "Hours":  1.0,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 16",
+        "Due":  "2026-12-12",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    },
+    {
+        "Student":  "Brianna Noelle Smith",
+        "Course":  "Personal Finance/Consumer Econ (ECON-219-800)",
+        "Task":  "Quiz 17",
+        "Due":  "2026-12-12",
+        "Status":  "Unfinished",
+        "Hours":  0.75,
+        "Priority":  "UPCOMING"
+    }
+]
