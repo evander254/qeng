@@ -9,6 +9,22 @@ const shortCourse = (course) => course?.split(' (')[0] || 'Class assignment'
 const localDateKey = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
 const timeGreeting = () => { const hour = new Date().getHours(); return hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening' }
 const offsetDateKey = (days) => { const now = new Date(); return localDateKey(new Date(now.getFullYear(), now.getMonth(), now.getDate() + days)) }
+const assignmentUrgencyRank = (item, today) => {
+  if (item.Status === 'Completed') return 4
+  const priority = item.Priority?.toUpperCase()
+  if (priority === 'OVERDUE' || (item.Due && item.Due < today)) return 0
+  if (priority === 'URGENT' || item.Due === today) return 1
+  return item.Due ? 2 : 3
+}
+const compareAssignmentsByUrgency = (a, b, sortOrder = 'asc') => {
+  const today = localDateKey()
+  const rankCompare = assignmentUrgencyRank(a, today) - assignmentUrgencyRank(b, today)
+  if (rankCompare) return rankCompare
+  if (a.Due && b.Due && a.Due !== b.Due) return sortOrder === 'asc' ? a.Due.localeCompare(b.Due) : b.Due.localeCompare(a.Due)
+  if (!a.Due && b.Due) return -1
+  if (a.Due && !b.Due) return 1
+  return a.Task.localeCompare(b.Task)
+}
 
 function InstallAppButton({ onNotice }) {
   const [installPrompt, setInstallPrompt] = useState(null)
@@ -51,6 +67,7 @@ function Dashboard({ user, profile, onSignOut }) {
   const [darkMode, setDarkMode] = useState(prefs.darkMode === true)
   const [navigationStack, setNavigationStack] = useState(() => { try { return JSON.parse(sessionStorage.getItem(`voski.history.${user.id}`) || '[]') } catch { return [] } })
   const [selectedStudent, setSelectedStudent] = useState('')
+  const [selectedStudentClass, setSelectedStudentClass] = useState('All classes')
   const [selectedAssignment, setSelectedAssignment] = useState(null)
   const [selectedDueDate, setSelectedDueDate] = useState(prefs.selectedDueDate || localDateKey())
   const [updatingId, setUpdatingId] = useState('')
@@ -58,10 +75,12 @@ function Dashboard({ user, profile, onSignOut }) {
   const [calendarMonth, setCalendarMonth] = useState(() => { const now = new Date(); return new Date(now.getFullYear(), now.getMonth(), 1) })
   const calendarRef = useRef(null)
 
-  const currentScreen = () => ({ view, overviewPanel, classFilter, student, assignmentFilter, query, currentPage, sortOrder, adminMode, selectedStudent, selectedAssignment, selectedDueDate })
+  useEffect(() => { setSelectedStudentClass('All classes') }, [selectedStudent])
+
+  const currentScreen = () => ({ view, overviewPanel, classFilter, student, assignmentFilter, query, currentPage, sortOrder, adminMode, selectedStudent, selectedStudentClass, selectedAssignment, selectedDueDate })
   const restoreScreen = (screen) => {
     if (!screen) return
-    setView(screen.view || 'Overview'); setOverviewPanel(screen.overviewPanel || 'home'); setClassFilter(screen.classFilter || 'All classes'); setStudent(screen.student || 'All students'); setAssignmentFilter(screen.assignmentFilter || 'All assignments'); setQuery(screen.query || ''); setCurrentPage(screen.currentPage || 1); setSortOrder(screen.sortOrder || 'asc'); setAdminMode(screen.adminMode === true && profile?.role === 'admin'); setSelectedStudent(screen.selectedStudent || ''); setSelectedAssignment(screen.selectedAssignment || null); setSelectedDueDate(screen.selectedDueDate || localDateKey())
+    setView(screen.view || 'Overview'); setOverviewPanel(screen.overviewPanel || 'home'); setClassFilter(screen.classFilter || 'All classes'); setStudent(screen.student || 'All students'); setAssignmentFilter(screen.assignmentFilter || 'All assignments'); setQuery(screen.query || ''); setCurrentPage(screen.currentPage || 1); setSortOrder(screen.sortOrder || 'asc'); setAdminMode(screen.adminMode === true && profile?.role === 'admin'); setSelectedStudent(screen.selectedStudent || ''); setSelectedStudentClass(screen.selectedStudentClass || 'All classes'); setSelectedAssignment(screen.selectedAssignment || null); setSelectedDueDate(screen.selectedDueDate || localDateKey())
   }
   const navigateScreen = (next) => {
     setNavigationStack((stack) => [...stack.slice(-19), currentScreen()])
@@ -140,20 +159,7 @@ function Dashboard({ user, profile, onSignOut }) {
     const categoryMatch = category === 'All assignments' || (category === 'Overdue' ? Boolean(item.Due && item.Due < today && !isCompleted) : category === 'Upcoming' ? Boolean(item.Due && item.Due > today && !isCompleted) : category === 'Due today' ? item.Due === today : category === 'Completed' ? isCompleted : true)
     return searchMatch && priorityMatch && studentMatch && classMatch && categoryMatch
   }).sort((a, b) => {
-    const today = localDateKey()
-    const urgencyRank = (item) => {
-      if (item.Status === 'Completed') return 4
-      const priority = item.Priority?.toUpperCase()
-      if (priority === 'OVERDUE' || (item.Due && item.Due < today)) return 0
-      if (priority === 'URGENT' || item.Due === today) return 1
-      return item.Due ? 2 : 3
-    }
-    const rankCompare = urgencyRank(a) - urgencyRank(b)
-    if (rankCompare) return rankCompare
-    if (a.Due && b.Due && a.Due !== b.Due) return sortOrder === 'asc' ? a.Due.localeCompare(b.Due) : b.Due.localeCompare(a.Due)
-    if (!a.Due && b.Due) return -1
-    if (a.Due && !b.Due) return 1
-    return a.Task.localeCompare(b.Task)
+    return compareAssignmentsByUrgency(a, b, sortOrder)
   }), [data, query, priority, student, classFilter, assignmentFilter, view, sortOrder])
   const pageSize = 10
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
@@ -180,7 +186,9 @@ function Dashboard({ user, profile, onSignOut }) {
     { label: 'Overdue', icon: CircleAlert, count: overdue },
   ]
   const studentAssignments = selectedStudent ? data.filter((item) => item.Student === selectedStudent) : []
-  const studentCompleted = studentAssignments.filter((item) => item.Status === 'Completed').length
+  const studentCourses = [...new Set(studentAssignments.map((item) => item.Course))].sort()
+  const visibleStudentAssignments = studentAssignments.filter((item) => selectedStudentClass === 'All classes' || item.Course === selectedStudentClass).sort((a, b) => compareAssignmentsByUrgency(a, b, sortOrder))
+  const studentCompleted = visibleStudentAssignments.filter((item) => item.Status === 'Completed').length
   const updateProgress = async (item) => {
     if (!item.id || updatingId) return false
     const nextStatus = item.Status === 'Completed' ? 'Unfinished' : 'Completed'
@@ -235,7 +243,7 @@ function Dashboard({ user, profile, onSignOut }) {
         </>}
         <footer className="page-footer"><span>Copyright 2026 VOSKI Learning</span><span>Built for better learning outcomes <span className="footer-star">*</span></span></footer>
       </div>
-      {selectedStudent && <div className="dialog-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) goBack() }}><section className="detail-dialog student-dialog" role="dialog" aria-modal="true" aria-labelledby="student-title"><button className="dialog-close" onClick={goBack} aria-label="Close student details"><X size={18}/></button><div className="dialog-eyebrow"><Users size={14}/> STUDENT OVERVIEW</div><h2 id="student-title">{selectedStudent}</h2><p className="dialog-subtitle">Assignments and progress across this student's classes.</p><div className="student-classes-summary"><strong>{new Set(studentAssignments.map((item) => item.Course)).size} classes</strong><div>{[...new Set(studentAssignments.map((item) => item.Course))].map((course) => <span key={course}><BookOpen size={12}/>{shortCourse(course)}</span>)}</div></div><div className="student-progress"><div><strong>{studentCompleted}<span> / {studentAssignments.length}</span></strong><small>assignments completed</small></div><div className="progress-track"><span style={{ width: `${studentAssignments.length ? studentCompleted / studentAssignments.length * 100 : 0}%` }}/></div></div><div className="student-work-list">{studentAssignments.map((item) => <article key={item.id || item.Task} className="student-work-item"><button className={`complete-toggle ${item.Status === 'Completed' ? 'checked' : ''}`} onClick={() => updateProgress(item)} disabled={updatingId === item.id} aria-label={`Toggle ${item.Task}`}>{item.Status === 'Completed' ? <CheckCircle2 size={18}/> : <Circle size={18}/>}</button><button className="student-work-copy" onClick={() => navigateScreen({ selectedAssignment: item })}><strong>{item.Task}</strong><span>{shortCourse(item.Course)}  |  {formatDate(item.Due)}</span></button><span className={`priority-pill ${item.Priority.toLowerCase()}`}><i/>{item.Status === 'Completed' ? 'Done' : item.Priority === 'OVERDUE' ? 'Overdue' : item.Priority === 'URGENT' ? 'Due soon' : 'Upcoming'}</span></article>)}</div></section></div>}
+      {selectedStudent && <div className="dialog-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) goBack() }}><section className="detail-dialog student-dialog" role="dialog" aria-modal="true" aria-labelledby="student-title"><button className="dialog-close" onClick={goBack} aria-label="Close student details"><X size={18}/></button><div className="dialog-eyebrow"><Users size={14}/> STUDENT OVERVIEW</div><h2 id="student-title">{selectedStudent}</h2><p className="dialog-subtitle">Assignments and progress across this student's classes.</p><div className="student-classes-summary"><strong>Filter assignments by class</strong><div className="student-class-filters" role="group" aria-label="Filter student assignments by class"><button className={selectedStudentClass === 'All classes' ? 'active' : ''} aria-pressed={selectedStudentClass === 'All classes'} onClick={() => setSelectedStudentClass('All classes')}>All classes</button>{studentCourses.map((course) => <button key={course} className={selectedStudentClass === course ? 'active' : ''} aria-pressed={selectedStudentClass === course} title={course} onClick={() => setSelectedStudentClass(course)}><BookOpen size={12}/><span>{shortCourse(course)}</span></button>)}</div></div><div className="student-progress"><div><strong>{studentCompleted}<span> / {visibleStudentAssignments.length}</span></strong><small>assignments completed</small></div><div className="progress-track"><span style={{ width: `${visibleStudentAssignments.length ? studentCompleted / visibleStudentAssignments.length * 100 : 0}%` }}/></div></div><div className="student-work-list">{visibleStudentAssignments.map((item) => <article key={item.id || item.Task} className="student-work-item"><button className={`complete-toggle ${item.Status === 'Completed' ? 'checked' : ''}`} onClick={() => updateProgress(item)} disabled={updatingId === item.id} aria-label={`Toggle ${item.Task}`}>{item.Status === 'Completed' ? <CheckCircle2 size={18}/> : <Circle size={18}/>}</button><button className="student-work-copy" onClick={() => navigateScreen({ selectedAssignment: item })}><strong>{item.Task}</strong><span>{shortCourse(item.Course)}  |  {formatDate(item.Due)}</span></button><span className={`priority-pill ${item.Priority.toLowerCase()}`}><i/>{item.Status === 'Completed' ? 'Done' : item.Priority === 'OVERDUE' ? 'Overdue' : item.Priority === 'URGENT' ? 'Due soon' : 'Upcoming'}</span></article>)}</div></section></div>}
       {selectedAssignment && <div className="dialog-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) goBack() }}><section className="detail-dialog assignment-dialog" role="dialog" aria-modal="true" aria-labelledby="assignment-title"><button className="dialog-close" onClick={goBack} aria-label="Close assignment details"><X size={18}/></button><div className="dialog-eyebrow"><BookOpen size={14}/> ASSIGNMENT DETAILS</div><span className={`priority-pill ${selectedAssignment.Priority.toLowerCase()}`}><i/>{selectedAssignment.Priority === 'OVERDUE' ? 'Overdue' : selectedAssignment.Priority === 'URGENT' ? 'Due soon' : 'Upcoming'}</span><h2 id="assignment-title">{selectedAssignment.Task}</h2><p className="dialog-subtitle">{shortCourse(selectedAssignment.Course)}</p><div className="detail-facts"><div><small>STUDENT</small><button onClick={() => navigateScreen({ selectedAssignment: null, selectedStudent: selectedAssignment.Student })}>{selectedAssignment.Student}<ChevronRight size={14}/></button></div><div><small>DUE DATE</small><strong>{formatDate(selectedAssignment.Due)}</strong></div><div><small>ESTIMATED TIME</small><strong>{selectedAssignment.Hours || 0} hours</strong></div><div><small>STATUS</small><strong>{selectedAssignment.Status}</strong></div></div><button className={`mark-complete-button ${selectedAssignment.Status === 'Completed' ? 'done' : ''}`} onClick={async () => { if (await updateProgress(selectedAssignment)) setSelectedAssignment((current) => current ? { ...current, Status: current.Status === 'Completed' ? 'Unfinished' : 'Completed' } : null) }}>{selectedAssignment.Status === 'Completed' ? <><CheckCircle2 size={17}/> Mark as in progress</> : <><Check size={17}/> Mark assignment complete</>}</button></section></div>}
       {notice && <div className="toast" role="status"><Check size={16} />{notice}<button onClick={() => setNotice('')} aria-label="Dismiss"><X size={15} /></button></div>}
     </main>

@@ -279,6 +279,12 @@ button:disabled { cursor: not-allowed; opacity: .58; }
 .detail-dialog h2 { color: var(--text-primary); font-size: 25px; letter-spacing: -.65px; }
 .dialog-subtitle { color: var(--text-secondary); font-size: 14px; }
 .student-classes-summary, .student-progress { border-color: var(--border); border-radius: 14px; background: var(--surface-muted); }
+.student-class-filters { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.student-class-filters button { display: inline-flex; min-width: 40px; min-height: 36px; align-items: center; justify-content: center; gap: 6px; padding: 0 11px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text-secondary); font-size: 11px; font-weight: 650; cursor: pointer; transition: color .15s, background .15s, border-color .15s, transform .15s; }
+.student-class-filters button:hover { border-color: #cfc5ff; color: var(--primary); transform: translateY(-1px); }
+.student-class-filters button.active { border-color: #d8d0ff; color: var(--primary); background: var(--primary-soft); }
+.student-class-filters button svg { flex: 0 0 auto; }
+.student-class-filters button span { padding: 0; border-radius: 0; color: inherit; background: transparent; font-size: inherit; }
 .student-work-item { border-color: var(--border); }
 .student-work-copy strong { color: var(--text-primary); font-size: 13px; }
 .student-work-copy span { color: var(--text-muted); font-size: 12px; }
@@ -333,6 +339,8 @@ html[data-theme="dark"] .auth-card > p, html[data-theme="dark"] .auth-card form 
 html[data-theme="dark"] .auth-loading, html[data-theme="dark"] .setup-notice { background: var(--background); color: var(--text-secondary); }
 html[data-theme="dark"] .setup-notice h1 { color: var(--text-primary); }
 html[data-theme="dark"] .student-classes-summary, html[data-theme="dark"] .student-progress { color: var(--text-secondary); background: var(--surface-muted); border-color: var(--border); }
+html[data-theme="dark"] .student-class-filters button { color: var(--text-secondary); background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .student-class-filters button.active { color: #d1c5ff; background: #2a234d; border-color: #4a3d83; }
 html[data-theme="dark"] .attention-banner { border-color: #4b3827; background: linear-gradient(100deg, #2d241d, #1b1d2b); }
 html[data-theme="dark"] .attention-copy strong { color: #ffd5a8; }
 html[data-theme="dark"] .attention-copy span { color: #c7a987; }
