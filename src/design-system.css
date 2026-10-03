@@ -119,6 +119,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .calendar-popover-footer > button:hover { background: var(--primary-soft); border-color: #d4cbff; }
 .topbar-actions { gap: 14px; }
 .icon-button, .top-back-button { min-width: 40px; min-height: 40px; border-radius: 12px; }
+.install-button { color: var(--primary); background: var(--primary-soft); }
+.install-button:hover { color: #fff; background: linear-gradient(130deg, var(--primary), var(--primary-bright)); box-shadow: 0 5px 14px rgb(104 70 232 / 20%); transform: translateY(-1px); }
 .top-avatar { width: 36px; height: 36px; border-radius: 50%; font-size: 12px; }
 .page-wrap { width: min(100%, 1540px); margin: 0 auto; padding: 36px clamp(24px, 4vw, 56px) 36px; }
 

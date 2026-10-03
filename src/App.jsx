@@ -1,5 +1,5 @@
 ﻿import { useEffect, useMemo, useRef, useState } from 'react'
-import { Activity, ArrowDownUp, ArrowLeft, ArrowRight, Bell, BookOpen, CalendarDays, Check, CheckCircle2, ChevronDown, ChevronRight, Circle, CircleAlert, Clock3, GraduationCap, LayoutDashboard, ListFilter, Moon, Search, SlidersHorizontal, Sun, Users, X } from 'lucide-react'
+import { Activity, ArrowDownUp, ArrowLeft, ArrowRight, Bell, BookOpen, CalendarDays, Check, CheckCircle2, ChevronDown, ChevronRight, Circle, CircleAlert, Clock3, Download, GraduationCap, LayoutDashboard, ListFilter, Moon, Search, SlidersHorizontal, Sun, Users, X } from 'lucide-react'
 import assignments from './data/assignments.json'
 import { supabase } from './lib/supabase'
 
@@ -9,6 +9,27 @@ const shortCourse = (course) => course?.split(' (')[0] || 'Class assignment'
 const localDateKey = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
 const timeGreeting = () => { const hour = new Date().getHours(); return hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening' }
 const offsetDateKey = (days) => { const now = new Date(); return localDateKey(new Date(now.getFullYear(), now.getMonth(), now.getDate() + days)) }
+
+function InstallAppButton({ onNotice }) {
+  const [installPrompt, setInstallPrompt] = useState(null)
+  const [installed, setInstalled] = useState(() => window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true)
+  useEffect(() => {
+    const handleInstallPrompt = (event) => { event.preventDefault(); setInstallPrompt(event) }
+    const handleInstalled = () => { setInstalled(true); setInstallPrompt(null) }
+    window.addEventListener('beforeinstallprompt', handleInstallPrompt)
+    window.addEventListener('appinstalled', handleInstalled)
+    return () => { window.removeEventListener('beforeinstallprompt', handleInstallPrompt); window.removeEventListener('appinstalled', handleInstalled) }
+  }, [])
+  if (installed) return null
+  const install = async () => {
+    if (!installPrompt) { onNotice('To install VOSKI, use your browser menu and choose “Install app” or “Add to Home Screen”.'); return }
+    await installPrompt.prompt()
+    const { outcome } = await installPrompt.userChoice
+    if (outcome === 'accepted') setInstalled(true)
+    setInstallPrompt(null)
+  }
+  return <button className="icon-button install-button" aria-label="Install VOSKI as an app" title="Install VOSKI" onClick={install}><Download size={17}/></button>
+}
 
 function Dashboard({ user, profile, onSignOut }) {
   const [prefs] = useState(() => { try { return JSON.parse(localStorage.getItem(`voski.preferences.${user.id}`) || '{}') } catch { return {} } })
@@ -119,11 +140,20 @@ function Dashboard({ user, profile, onSignOut }) {
     const categoryMatch = category === 'All assignments' || (category === 'Overdue' ? Boolean(item.Due && item.Due < today && !isCompleted) : category === 'Upcoming' ? Boolean(item.Due && item.Due > today && !isCompleted) : category === 'Due today' ? item.Due === today : category === 'Completed' ? isCompleted : true)
     return searchMatch && priorityMatch && studentMatch && classMatch && categoryMatch
   }).sort((a, b) => {
-    if (!a.Due && !b.Due) return a.Task.localeCompare(b.Task)
-    if (!a.Due) return 1
-    if (!b.Due) return -1
-    const dateCompare = sortOrder === 'asc' ? a.Due.localeCompare(b.Due) : b.Due.localeCompare(a.Due)
-    return dateCompare || a.Task.localeCompare(b.Task)
+    const today = localDateKey()
+    const urgencyRank = (item) => {
+      if (item.Status === 'Completed') return 4
+      const priority = item.Priority?.toUpperCase()
+      if (priority === 'OVERDUE' || (item.Due && item.Due < today)) return 0
+      if (priority === 'URGENT' || item.Due === today) return 1
+      return item.Due ? 2 : 3
+    }
+    const rankCompare = urgencyRank(a) - urgencyRank(b)
+    if (rankCompare) return rankCompare
+    if (a.Due && b.Due && a.Due !== b.Due) return sortOrder === 'asc' ? a.Due.localeCompare(b.Due) : b.Due.localeCompare(a.Due)
+    if (!a.Due && b.Due) return -1
+    if (a.Due && !b.Due) return 1
+    return a.Task.localeCompare(b.Task)
   }), [data, query, priority, student, classFilter, assignmentFilter, view, sortOrder])
   const pageSize = 10
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
@@ -174,7 +204,7 @@ function Dashboard({ user, profile, onSignOut }) {
     </aside>
 
     <main id="top" className="main-content">
-      <header className="topbar"><div className="topbar-leading">{navigationStack.length > 0 && <button className="top-back-button" onClick={goBack} aria-label="Go back"><ArrowLeft size={16}/><span>Back</span></button>}<div className="breadcrumb">Workspace <span>/</span> <strong>{adminMode ? 'Admin' : view === 'Overview' ? overviewPanel === 'home' ? 'Overview' : overviewPanel : view}</strong></div></div><div className="topbar-actions"><div ref={calendarRef} className="calendar-popover-anchor"><button className="today-label calendar-trigger" aria-label="Open calendar" aria-expanded={calendarOpen} onClick={() => setCalendarOpen((open) => !open)}><CalendarDays size={16} /> {new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())}</button>{calendarOpen && <section className="calendar-popover" aria-label="Assignment calendar"><header className="calendar-popover-header"><button className="calendar-month-arrow" aria-label="Previous month" onClick={() => setCalendarMonth((month) => new Date(month.getFullYear(), month.getMonth() - 1, 1))}><ArrowLeft size={16}/></button><strong>{new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(calendarMonth)}</strong><button className="calendar-month-arrow" aria-label="Next month" onClick={() => setCalendarMonth((month) => new Date(month.getFullYear(), month.getMonth() + 1, 1))}><ArrowRight size={16}/></button></header><div className="calendar-grid calendar-weekdays" aria-hidden="true">{calendarWeekdays.map((day) => <span key={day}>{day}</span>)}</div><div className="calendar-grid">{calendarDays.map((day) => { const key = localDateKey(day); const taskCount = data.filter((item) => item.Due === key).length; const isCurrentMonth = day.getMonth() === calendarMonth.getMonth(); const isToday = key === localDateKey(); return <button key={key} className={`calendar-day ${isCurrentMonth ? '' : 'outside-month'} ${isToday ? 'today' : ''} ${key === selectedDueDate ? 'selected' : ''} ${taskCount ? 'has-tasks' : ''}`} aria-label={`${new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(day)}${taskCount ? `, ${taskCount} ${taskCount === 1 ? 'task' : 'tasks'} due` : ', no tasks due'}`} title={taskCount ? `${taskCount} ${taskCount === 1 ? 'task' : 'tasks'} due` : undefined} onClick={() => { setSelectedDueDate(key); setCalendarOpen(false); navigateScreen({ view: 'Due soon', assignmentFilter: 'All assignments', selectedDueDate: key, overviewPanel: 'home', adminMode: false }) }}><span>{day.getDate()}</span>{taskCount > 0 && <i>{taskCount}</i>}</button> })}</div><footer className="calendar-popover-footer"><span><i/> {data.filter((item) => item.Due && item.Due.startsWith(`${calendarMonth.getFullYear()}-${String(calendarMonth.getMonth() + 1).padStart(2, '0')}`)).length} tasks this month</span><button onClick={() => { const today = new Date(); setCalendarMonth(new Date(today.getFullYear(), today.getMonth(), 1)); setSelectedDueDate(localDateKey()); setCalendarOpen(false); navigateScreen({ view: 'Due soon', assignmentFilter: 'All assignments', selectedDueDate: localDateKey(), overviewPanel: 'home', adminMode: false }) }}>Today</button></footer></section>}</div><button className="icon-button theme-toggle" aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'} title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => setDarkMode((mode) => !mode)}>{darkMode ? <Sun size={17}/> : <Moon size={17}/>}</button><button className="icon-button notification-button" aria-label="Notifications" onClick={() => setNotice("You are all caught up on notifications.")}><Bell size={18} /><i /></button><div className="top-avatar">{(profile?.username || user.email || 'U').slice(0,2).toUpperCase()}</div></div></header>
+      <header className="topbar"><div className="topbar-leading">{navigationStack.length > 0 && <button className="top-back-button" onClick={goBack} aria-label="Go back"><ArrowLeft size={16}/><span>Back</span></button>}<div className="breadcrumb">Workspace <span>/</span> <strong>{adminMode ? 'Admin' : view === 'Overview' ? overviewPanel === 'home' ? 'Overview' : overviewPanel : view}</strong></div></div><div className="topbar-actions"><div ref={calendarRef} className="calendar-popover-anchor"><button className="today-label calendar-trigger" aria-label="Open calendar" aria-expanded={calendarOpen} onClick={() => setCalendarOpen((open) => !open)}><CalendarDays size={16} /> {new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())}</button>{calendarOpen && <section className="calendar-popover" aria-label="Assignment calendar"><header className="calendar-popover-header"><button className="calendar-month-arrow" aria-label="Previous month" onClick={() => setCalendarMonth((month) => new Date(month.getFullYear(), month.getMonth() - 1, 1))}><ArrowLeft size={16}/></button><strong>{new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(calendarMonth)}</strong><button className="calendar-month-arrow" aria-label="Next month" onClick={() => setCalendarMonth((month) => new Date(month.getFullYear(), month.getMonth() + 1, 1))}><ArrowRight size={16}/></button></header><div className="calendar-grid calendar-weekdays" aria-hidden="true">{calendarWeekdays.map((day) => <span key={day}>{day}</span>)}</div><div className="calendar-grid">{calendarDays.map((day) => { const key = localDateKey(day); const taskCount = data.filter((item) => item.Due === key).length; const isCurrentMonth = day.getMonth() === calendarMonth.getMonth(); const isToday = key === localDateKey(); return <button key={key} className={`calendar-day ${isCurrentMonth ? '' : 'outside-month'} ${isToday ? 'today' : ''} ${key === selectedDueDate ? 'selected' : ''} ${taskCount ? 'has-tasks' : ''}`} aria-label={`${new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(day)}${taskCount ? `, ${taskCount} ${taskCount === 1 ? 'task' : 'tasks'} due` : ', no tasks due'}`} title={taskCount ? `${taskCount} ${taskCount === 1 ? 'task' : 'tasks'} due` : undefined} onClick={() => { setSelectedDueDate(key); setCalendarOpen(false); navigateScreen({ view: 'Due soon', assignmentFilter: 'All assignments', selectedDueDate: key, overviewPanel: 'home', adminMode: false }) }}><span>{day.getDate()}</span>{taskCount > 0 && <i>{taskCount}</i>}</button> })}</div><footer className="calendar-popover-footer"><span><i/> {data.filter((item) => item.Due && item.Due.startsWith(`${calendarMonth.getFullYear()}-${String(calendarMonth.getMonth() + 1).padStart(2, '0')}`)).length} tasks this month</span><button onClick={() => { const today = new Date(); setCalendarMonth(new Date(today.getFullYear(), today.getMonth(), 1)); setSelectedDueDate(localDateKey()); setCalendarOpen(false); navigateScreen({ view: 'Due soon', assignmentFilter: 'All assignments', selectedDueDate: localDateKey(), overviewPanel: 'home', adminMode: false }) }}>Today</button></footer></section>}</div><InstallAppButton onNotice={setNotice}/><button className="icon-button theme-toggle" aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'} title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => setDarkMode((mode) => !mode)}>{darkMode ? <Sun size={17}/> : <Moon size={17}/>}</button><button className="icon-button notification-button" aria-label="Notifications" onClick={() => setNotice("You are all caught up on notifications.")}><Bell size={18} /><i /></button><div className="top-avatar">{(profile?.username || user.email || 'U').slice(0,2).toUpperCase()}</div></div></header>
       <div className="page-wrap">
         {view === 'Overview' && !adminMode ? <section className="welcome-row overview-welcome"><div><div className="eyebrow"><span className="live-dot" /> YOUR DAILY CLASSROOM BRIEFING</div><h1>{timeGreeting()}, {profile?.username || 'there'} <span className="wave">!</span></h1><p className="page-subtitle">Here's what's on your schedule today.</p></div><span className="overview-date"><CalendarDays size={16}/>{new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())}</span></section> : <section className="welcome-row"><div><div className="eyebrow"><span className="live-dot" /> YOUR CLASSROOM, AT A GLANCE</div><h1>Welcome back, {profile?.username || 'there'} <span className="wave">*</span></h1><p className="page-subtitle">Here's what's happening across your classes this week.</p></div><button className="date-control" onClick={() => setNotice('Showing assignments for Fall semester 2026.')}><CalendarDays size={17} /> Fall semester <ChevronDown size={15} /></button></section>}
 

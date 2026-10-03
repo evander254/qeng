@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "VOSKI — Class workspace",
+  "short_name": "VOSKI",
+  "description": "A clear, focused workspace for managing student assignments and class progress.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f6fc",
+  "theme_color": "#171d3a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/voski-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
